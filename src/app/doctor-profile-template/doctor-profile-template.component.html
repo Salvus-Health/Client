@@ -1,9 +1,7 @@
 <div class="row">
   <img class="col-md-12" [src]="dr.imgUrl" style="padding: 0px; height: 500px">
 
-  <div class="col-md-10 col-12  offset-md-1">
-
-
+  <div class="col-md-10 col-12  offset-md-1 row">
     <div class="col-md-7 col-xl-7 col-12 leftInfo">
       <p class="nameLabel col-md-12">Clinic Name</p>
       <p class="col-md-12 practiceName">{{dr.clinicName}}</p>
@@ -52,13 +50,10 @@
                 (mouseleave)="hoveredDate = null">{{ date.day }}
             </span>
         </ng-template>
-
       </div>
-
-
     </div>
 
-    <div class="col-xl-4 col-md-4" style="margin-bottom: 30px">
+    <div class="col-md-3 col-xl-4 col-12" style="margin-bottom: 30px">
       <mat-card class="col-md-12 rightInfo">
         <p><span class="money">$ {{dr.visitFee}}</span> per month</p>
         <hr>

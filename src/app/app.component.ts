@@ -17,7 +17,7 @@ export class AppComponent {
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   constructor(private router: Router) {
-    router.navigateByUrl(ClientRoutes.initialPage);
+    this.goToOptions();
   }
 
   someMethod() {
