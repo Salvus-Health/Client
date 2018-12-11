@@ -28,7 +28,7 @@ import {ClientRoutes} from '../routes/ClientRoutes';
 
 export class CustomerInfoInputComponent implements OnInit {
 
-  employerInsuranceQuestion = ' Does your employer provides you health insurance?';
+  employerInsuranceQuestion = ' Does your employer provide you health insurance?';
   empIHide = true;
   additionalInfo = false;
 
