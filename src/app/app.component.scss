@@ -1,0 +1,33 @@
+$width: 50%;
+
+//#topSearch {
+//  width: 50%;
+//  font-size: 16px;
+//  background-color: white;
+//  -webkit-transition: width 0.4s ease-in-out;
+//  transition: width 0.4s ease-in-out;
+//}
+//#topSearch:focus{
+//  width: 100%;
+//}
+
+
+
+.comp-name {
+  color: #1599f9;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  //justify-content: center;
+}
+
+.logo {
+  //padding:5px;
+  cursor: pointer;
+}
+
+.nav-bar-top {
+  //display: flex;
+  //justify-content: space-between;
+  padding:0px;
+}

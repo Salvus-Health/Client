@@ -1,0 +1,42 @@
+.coverPicture {
+  height: 200px;
+}
+
+.cardMakeup {
+  height: 350px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+
+.doctorName{
+  font-weight: 600;
+  padding: 0px;
+  margin-bottom: 0px;
+  color: rgb(20, 39, 94);
+  //color: #4815f9;
+
+}
+
+.practiceName{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.doctorRate{
+  color: rgb(72, 72, 72);
+}
+
+.description{
+
+}
+
+.butM{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
