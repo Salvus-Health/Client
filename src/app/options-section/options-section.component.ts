@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Doctor} from '../models/Doctor';
 import {DoctorProfileInfoService} from '../doctor-profile-template/doctor-profile-info.service';
 import {Authentication} from '../_services/Authentication';
@@ -18,23 +18,8 @@ import {LocalStorage} from '../routes/LocalStorage';
 export class OptionsSectionComponent extends Authentication implements OnInit {
   drs: Doctor [];
   testImg = '../../assets/doc_pic.jpeg';
-  // drs: Doctor [] = [
-  //   new Doctor('../../assets/doc_pic.jpeg', 'Lionel Messi', 'Best doctor in the world', 'I098A', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic_2.jpg', 'Cristiano Ronaldo',
-  //     'Second best doctor in the world', 'D098B', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg', 'Doctor House',
-  //     'This guy guesses whenever he needs to make a diagnostic', '00000', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg',
-  //     'Whut whut', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '00000', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg',
-  //     'Lionel Messi', 'Best doctor in the world', 'I098A', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg',
-  //     'Cristiano Ronaldo', 'Second best doctor in the world', 'D098B', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg',
-  //     'Doctor House', 'This guy guesses whenever he needs to make a diagnostic', '00000', null, 'My practice', 50),
-  //   new Doctor('../../assets/doc_pic.jpeg',
-  //     'Whut whut', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '00000', null, 'My practice', 50)
-  // ];
+  screenHeight:any;
+  screenWidth:any;
 
   constructor(private drService: DoctorProfileInfoService,
               authS: AuthenticationService,
@@ -45,9 +30,17 @@ export class OptionsSectionComponent extends Authentication implements OnInit {
     // debugger;
     //TODO: change this
     this.findClosest(8);
+    this.getScreenSize();
   }
 
   ngOnInit() {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    console.log(this.screenHeight, this.screenWidth);
   }
 
 
